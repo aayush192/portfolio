@@ -70,7 +70,7 @@ const Skills = () => {
                    className="h-12 w-12 hover:scale-125 transition-transform" alt="HTML5" />
             </div>
             <div className="flex items-center justify-center">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" 
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
                    className="h-12 w-12 hover:scale-125 transition-transform" alt="Tailwind CSS" />
             </div>
           </div>
