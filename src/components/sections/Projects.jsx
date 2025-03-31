@@ -8,21 +8,21 @@ const Projects = () => {
         description: "A full-stack e-commerce solution with CSS and JS",
         tech: ["React", "CSS"],
         link: "https://github.com/aayush192/ravn",
-        img:{ravnImg}
+        img:ravnImg
       },
       {
         title: "Game App",
         description: "Game to test your thinking",
         tech: ["React", "Node", "Tailwind"],
         link: "https://github.com/aayush192/trhunt",
-        img:{trhuntImg}
+        img:trhuntImg
       },
       {
         title: "Portfolio Website",
         description: "Responsive portfolio website with dark mode",
         tech: ["React", "Tailwind"],
         link: "https://github.com/aayush192/todo-react",
-        img:{todoImg}
+        img:todoImg
       },
     ];
   
