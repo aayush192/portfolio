@@ -1,12 +1,13 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import portfolioImg from "../../../img/portfolio.jpg";
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gray-900">
       <div className="container mx-auto px-6 text-center flex flex-col items-center">
         <motion.img
-          src="../../../img/portfolio.jpg"
+          src={portfolioImg}
           alt="Aayush Khadka"
           className="w-40 h-40 rounded-full mb-6 border-4 border-emerald-500 shadow-lg"
           initial={{ opacity: 0, scale: 0.8 }}
