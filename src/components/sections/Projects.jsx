@@ -1,4 +1,6 @@
-
+import trhuntImg from "../../../img/TRhunt.png";
+import ravnImg from "../../../img/ravn.png";
+import todoImg from "../../../img/todo.png";
 const Projects = () => {
     const projects = [
       {
@@ -6,21 +8,21 @@ const Projects = () => {
         description: "A full-stack e-commerce solution with CSS and JS",
         tech: ["React", "CSS"],
         link: "https://github.com/aayush192/ravn",
-        img:"../../../img/ravn.png"
+        img:{ravnImg}
       },
       {
         title: "Game App",
         description: "Game to test your thinking",
         tech: ["React", "Node", "Tailwind"],
         link: "https://github.com/aayush192/trhunt",
-        img:"../../../img/TRhunt.png"
+        img:{trhuntImg}
       },
       {
         title: "Portfolio Website",
         description: "Responsive portfolio website with dark mode",
         tech: ["React", "Tailwind"],
         link: "https://github.com/aayush192/todo-react",
-        img:"../../../img/todo.png"
+        img:{todoImg}
       },
     ];
   
