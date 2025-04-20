@@ -1,64 +1,134 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 import portfolioImg from "../../../img/portfolio.jpg";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="container mx-auto px-6 text-center flex flex-col items-center">
-        <motion.img
-          src={portfolioImg}
-          alt="Aayush Khadka"
-          className="w-40 h-40 rounded-full mb-6 border-4 border-emerald-500 shadow-lg"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-        />
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-100 mb-2">
-          Aayush Khadka
-        </h1>
-        <h2 className="text-2xl md:text-4xl font-medium text-emerald-400 mb-4">
-          Frontend Developer
-        </h2>
-        <p className="text-lg md:text-xl text-gray-400 mb-6 max-w-lg">
-          Passionate about building interactive and responsive web applications.
-        </p>
-        
-        {/* Skills Section */}
-        <div className="mb-8 bg-gray-800 p-4 rounded-lg shadow-md">
-          <h3 className="text-xl font-semibold text-gray-200 mb-2">Skills</h3>
-          <p className="text-lg text-gray-400">HTML, CSS, JavaScript, React, Node.js</p>
-        </div>
-        
-        {/* Call to Action */}
-        <div className="flex space-x-4 mb-6">
-          <a
-            href="projects"
-            className="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-all duration-300 transform hover:scale-105 shadow-md"
-          >
-            View Work
-          </a>
-          <a
-            href="/contact"
-            className="px-6 py-3 border border-emerald-500 text-emerald-500 rounded-lg hover:bg-emerald-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-md"
-          >
-            Contact Me
-          </a>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex space-x-6 text-gray-400">
-          <a href="https://github.com/aayush192" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-3xl hover:text-white transition-all duration-300" />
-          </a>
-          <a href="https://linkedin.com/in/aayush192" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-3xl hover:text-white transition-all duration-300" />
-          </a>
-          <a href="mailto:your-email@example.com">
-            <FaEnvelope className="text-3xl hover:text-white transition-all duration-300" />
-          </a>
-        </div>
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 px-6 py-20 relative overflow-hidden">
+      
+      {/* Animated Particles */}
+      <div className="absolute inset-0 pointer-events-none opacity-10 z-0">
+        {[...Array(40)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1.5 h-1.5 bg-purple-300 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.6, 0.2]
+            }}
+            transition={{
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity
+            }}
+          />
+        ))}
       </div>
+
+      <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center gap-16 relative z-10">
+        
+        {/* Profile Image */}
+        <motion.div 
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          className="relative group"
+        >
+          <div className="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-purple-600 rounded-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-300 rotate-6" />
+          <div className="relative overflow-hidden rounded-2xl border-4 border-indigo-500/40 shadow-2xl">
+            <img
+              src={portfolioImg}
+              alt="Aayush Khadka"
+              className="w-72 h-72 object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/60" />
+          </div>
+        </motion.div>
+
+        {/* Text Content */}
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="flex-1 text-center lg:text-left"
+        >
+          <div className="mb-8">
+            <span className="font-mono text-indigo-400 tracking-widest">
+              &lt;code&gt;
+            </span>
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4 bg-clip-text bg-gradient-to-r from-indigo-300 to-purple-500 text-transparent">
+  Aayush Khadka
+</h1>
+
+            <span className="font-mono text-indigo-400 tracking-widest">
+              &lt;/code&gt;
+            </span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-100 mb-6">
+            Crafting <span className="text-purple-400">Innovative Interfaces</span>
+          </h2>
+          
+          <p className="text-lg text-gray-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Frontend engineer focused on React and modern web technologies. Building 
+            seamless, dynamic, and visually stunning applications with a passion for UX.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-12">
+            <motion.a
+              href="#projects"
+              whileHover={{ y: -3 }}
+              className="relative px-8 py-4 bg-gradient-to-br from-indigo-600 to-purple-700 text-white rounded-lg font-medium flex items-center gap-2 shadow-lg hover:shadow-purple-500/40 transition-shadow"
+            >
+              <span>View Projects</span>
+              <FaArrowDown className="animate-pulse" />
+            </motion.a>
+            
+            <motion.a
+              href="#contact"
+              whileHover={{ y: -3 }}
+              className="px-8 py-4 border-2 border-indigo-500/50 text-indigo-300 rounded-lg font-medium hover:bg-indigo-500/20 transition-colors"
+            >
+              Get in Touch
+            </motion.a>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-start gap-6">
+            <span className="text-gray-300 font-mono text-sm tracking-widest">
+              FIND ME ONLINE
+            </span>
+            <div className="flex gap-6">
+              {[
+                { icon: <FaGithub />, link: "https://github.com/aayush192", label: "GitHub" },
+                { icon: <FaLinkedin />, link: "https://linkedin.com/in/aayush192", label: "LinkedIn" },
+                { icon: <FaEnvelope />, link: "mailto:your@email.com", label: "Email" }
+              ].map((item, i) => (
+                <motion.a
+                  key={i}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Link to ${item.label}`}
+                  whileHover={{ scale: 1.2 }}
+                  className="p-4 bg-gray-800/50 rounded-lg hover:bg-purple-500/20 hover:text-purple-300 transition-colors"
+                >
+                  {item.icon}
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <motion.div
+        animate={{ y: [0, 15, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
+      >
+        <FaArrowDown className="text-3xl text-indigo-400 opacity-60" />
+      </motion.div>
     </section>
   );
 }
