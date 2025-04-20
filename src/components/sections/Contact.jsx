@@ -17,7 +17,7 @@ const Contact = () => {
               <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-indigo-400" />
                 <a
-                  href="mailto:your-email@example.com"
+                  href="mailto:ayushkhadka9847.com"
                   className="hover:text-purple-300 transition-colors"
                 >
                   ayushkhadka9847@gmail.com
@@ -25,7 +25,12 @@ const Contact = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <FaPhoneAlt className="text-indigo-400" />
-                <span>+977-9746367727</span>
+                 <a
+                  href="tel:+9779746367727"
+                  className="hover:text-purple-300 transition-colors"
+                >
+                 +977-9746367727
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <FaMapMarkerAlt className="text-indigo-400" />
