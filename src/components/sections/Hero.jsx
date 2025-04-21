@@ -102,8 +102,8 @@ export default function Hero() {
             <div className="flex gap-6">
               {[
                 { icon: <FaGithub />, link: "https://github.com/aayush192", label: "GitHub" },
-                { icon: <FaLinkedin />, link: "https://linkedin.com/in/aayush192", label: "LinkedIn" },
-                { icon: <FaEnvelope />, link: "mailto:your@email.com", label: "Email" }
+                { icon: <FaLinkedin />, link: "https://linkedin.com/aayush192", label: "LinkedIn" },
+                { icon: <FaEnvelope />, link: "mailto:ayushkhadka9847@email.com", label: "Email" }
               ].map((item, i) => (
                 <motion.a
                   key={i}
