@@ -20,10 +20,12 @@ const Footer = () => {
               LinkedIn
             </a>
             <a 
-              href="./aayush-khadka.pdf" 
+              href="/aayush-khadka.pdf" 
               download
-              className="px-8 py-4 border-2 border-indigo-500/50 text-indigo-300 rounded-lg font-medium hover:bg-indigo-500/20 transition-colors"
-              >Download Resume</a>
+              className="className="text-gray-300 hover:text-purple-400 hover:underline transition duration-300"
+"
+              >Download Resume
+            </a>
           
           </div>
         </div>
