@@ -22,7 +22,8 @@ const Footer = () => {
             <a 
               href="/aayush-khadka.pdf" 
               download
-              className="className="text-gray-300 hover:text-purple-400 hover:underline transition duration-300">Download Resume
+              className="text-gray-300 hover:text-purple-400 hover:underline transition duration-300">
+            Download Resume
             </a>
           
           </div>
