@@ -20,9 +20,9 @@ const Footer = () => {
               LinkedIn
             </a>
             <a 
-              href="./aayush-khadka.pdf" 
+              href="./aayush-resume.pdf" 
               download
-              className="text-gray-300 hover:text-purple-400 hover:underline transition duration-300">
+              className="text-gray-300 hover:text-purple-400 transition duration-300">
             Download Resume
             </a>
           
