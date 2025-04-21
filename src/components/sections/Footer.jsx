@@ -19,9 +19,12 @@ const Footer = () => {
             >
               LinkedIn
             </a>
-            <button className="px-8 py-4 border-2 border-indigo-500/50 text-indigo-300 rounded-lg font-medium hover:bg-indigo-500/20 transition-colors">
-            <a href="download:./aayush-khadka.pdf">Resume</a>
-            </button>
+            <a 
+              href="./aayush-khadka.pdf" 
+              download
+              className="px-8 py-4 border-2 border-indigo-500/50 text-indigo-300 rounded-lg font-medium hover:bg-indigo-500/20 transition-colors"
+              >Download Resume</a>
+          
           </div>
         </div>
       </div>
